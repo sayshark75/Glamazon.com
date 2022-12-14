@@ -1,14 +1,16 @@
 import React from "react";
 import {Flex, Accordion, AccordionItem, AccordionButton,Box, AccordionPanel,Text, Link,AccordionIcon } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 
-const AccordMenu = ({heading,subData}) => {
+const AccordMenu = ({path ,heading,subData}) => {
+  const myNavi = useNavigate();
   return (
     <>
       <Accordion allowMultiple>
         <AccordionItem>
           <h2>
             <AccordionButton>
-              <Box as="span" flex="1" textAlign="left">
+              <Box onClick={()=>myNavi(path)} as="span" flex="1" textAlign="left">
                 {heading}
               </Box>
               <AccordionIcon />
