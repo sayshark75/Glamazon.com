@@ -2,14 +2,16 @@ import React from "react";
 import { Menu,Image, MenuButton, MenuList, Button, useDisclosure, Link, Text, Flex } from "@chakra-ui/react";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+import { useNavigate } from "react-router-dom";
 
-const TabMenu = ({ heading, subData,imgSrc }) => {
+const TabMenu = ({path, heading, subData,imgSrc }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const myNavi = useNavigate();
 
   return (
     <>
       <Menu isOpen={isOpen}>
-        <MenuButton onMouseEnter={onOpen} onMouseLeave={onClose} borderRadius={"0px"} bgColor={"blackAlpha.900"} color={"white"} as={Button}>
+        <MenuButton onClick={()=>{myNavi(path)}} onMouseEnter={onOpen} onMouseLeave={onClose} borderRadius={"0px"} bgColor={"blackAlpha.900"} color={"white"} as={Button}>
         <Flex justifyContent={"center"} alignItems={"center"} gap={"1"}>
           
         {heading} {!isOpen ? <KeyboardArrowDownIcon /> : <KeyboardArrowUpIcon />}

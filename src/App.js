@@ -4,6 +4,7 @@ import { Box } from "@chakra-ui/react";
 import NavbarContextProvider from "./Context/NavbarContextProvider";
 import FooterContextProvider from "./Context/FooterContextProvider";
 import Footer from "./Components/Footer/Footer";
+import AllRoutes from "./Routes/AllRoutes";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <NavbarContextProvider>
         <Navbar />
       </NavbarContextProvider>
+      <AllRoutes />
       <FooterContextProvider>
         <Footer />
       </FooterContextProvider>
