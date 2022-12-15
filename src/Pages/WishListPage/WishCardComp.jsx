@@ -2,8 +2,12 @@ import { Box, Button, Flex, Image, Spinner, Text, useToast } from "@chakra-ui/re
 import React, { useState } from "react";
 import StarIcon from "@mui/icons-material/Star";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
+import clickBeep from "../../Assets/click.mp3" 
+import useSound from "use-sound";
 
 const WishCardComp = ({ obj,AddToCart, removeData }) => {
+  const [play] = useSound(clickBeep, { volume: 0.5 });
+
   const toast = useToast();
 
   const [removeLoad, setRemoveLoad] = useState(false);
@@ -12,6 +16,7 @@ const WishCardComp = ({ obj,AddToCart, removeData }) => {
   const { name, star, price, category, image, brand, id } = obj;
 
   const handleRemove = async () => {
+    play()
     setRemoveLoad(true);
     await removeData(id);
     toast({
@@ -25,6 +30,7 @@ const WishCardComp = ({ obj,AddToCart, removeData }) => {
     setRemoveLoad(false);
   };
   const handleMoveToCart = async () => {
+    play()
     setCartLoad(true);
     await AddToCart(obj,id);
     toast({
@@ -43,7 +49,7 @@ const WishCardComp = ({ obj,AddToCart, removeData }) => {
       {/* Main Container */}
       <Flex boxShadow="lg" direction={"column"} mb={"2"} justifyContent={"space-between"}>
         <Image w={"100%"} src={image} alt="hello" />
-        <Flex direction={"column"}>
+        <Flex p={"4"} direction={"column"}>
         <Text fontSize="sm" as={"b"} align={"left"}>
           Product Name: {name}
         </Text>
