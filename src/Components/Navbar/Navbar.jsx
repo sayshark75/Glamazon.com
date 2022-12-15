@@ -12,7 +12,7 @@ const Navbar = () => {
   const myNavi = useNavigate();
   return (
     <>
-      <Box className={styles.posterBox}>
+      <Box>
         <Box>
           <Image width={"100%"} src="https://www.beautybebo.com/pub/media/ads/ad-desktop.jpg" alt="topBanner" />
         </Box>
@@ -21,15 +21,15 @@ const Navbar = () => {
           <Flex width={{ base: "100%", sm: "100%", md:"auto" }} justifyContent={"flex-start"}>
             <Image style={{cursor:"pointer"}} onClick={()=>myNavi("/")} width={{ base: "120px", sm: "180px", md: "260px" }} src={Brand2} alt="Brand" />
           </Flex>
-          <Flex width={{ base: "100%", sm: "100%", md: "420px" }} className={styles.posterBox}>
+          <Flex width={{ base: "100%", sm: "100%", md: "420px" }} >
             <Input borderColor={"blackAlpha.900"} mr="2" variant="flushed" placeholder="Search Product" />
-            <IconButton borderRadius={"0px"} bgColor={"blackAlpha.900"} color="white" aria-label="Search database" icon={<SearchIcon />} />
+            <IconButton _hover={{ color: "Black", backgroundColor: "white" }} borderRadius={"0px"} bgColor={"blackAlpha.900"} color="white" aria-label="Search database" icon={<SearchIcon />} />
           </Flex>
 
           <Flex width={{ base: "100%", sm: "100%", md:"auto" }} alignItems={"center"} justifyContent={{ base: "space-between", sm: "space-between",md:"space-evenly" }}>
-            <IconButton mr={"3"} borderRadius={"0px"} bgColor={"blackAlpha.900"} color="white" aria-label="Search database" icon={<FavoriteBorderIcon />} />
+            <IconButton  _hover={{ color: "Black", backgroundColor: "white" }} onClick={()=>myNavi("/wishlist")} mr={"3"} borderRadius={"0px"} bgColor={"blackAlpha.900"} color="white" aria-label="Search database" icon={<FavoriteBorderIcon />} />
             <Flex alignItems={"center"} justifyContent={"space-evenly"}>
-              <IconButton mr={"3"} borderRadius={"0px"} bgColor={"blackAlpha.900"} color="white" aria-label="Search database" icon={<PersonIcon />} />
+              <IconButton _hover={{ color: "Black", backgroundColor: "white" }} mr={"3"} borderRadius={"0px"} bgColor={"blackAlpha.900"} color="white" aria-label="Search database" icon={<PersonIcon />} />
               <Text>Sign Up</Text>
             </Flex>
           </Flex>

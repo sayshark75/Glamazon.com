@@ -18,7 +18,6 @@ const Footer = () => {
           w={{ base: "100%", md: "100%", lg: "90%", xl: "80%" }}
           p={3}
           spacing={{ base: "1", md: "2", lg: "4" }}
-          border={"1px solid blue"}
           columns={{ base: "1", sm: "2", md: "2", lg: "4" }}
         >
           {footerData.map((el, id) => {
@@ -26,7 +25,7 @@ const Footer = () => {
           })}
         </SimpleGrid>
 
-        <SocialIcons/>
+        <SocialIcons />
         
         <PaymentBar/>
         

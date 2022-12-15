@@ -9,17 +9,17 @@ const Home = () => {
   return (
     <>
       {/* Carousel Section */}
-      <Flex justifyContent={"center"} border={"1px solid red"} p={"1"} m={"auto"} w={{ base: "100%", md: "100%", lg: "90%", xl: "80%" }}>
-        {/* <Flex border={"1px solid blue"}>
+      <Flex justifyContent={"center"} p={"1"} m={"auto"} w={{ base: "100%", md: "100%", lg: "90%", xl: "80%" }}>
+        {/* <Flex >
           /////////Drop Left Menu Not Added Here
       </Flex> */}
-        <Box width={"100%"} border={"1px solid green"}>
+        <Box width={"100%"} >
           <Carousel />
         </Box>
       </Flex>
 
       {/* Banner Section */}
-      <Box m={"auto"} mt={"2"} w={{ base: "100%", md: "100%", lg: "90%", xl: "80%" }} border={"1px solid green"}>
+      <Box m={"auto"} mt={"2"} w={{ base: "100%", md: "100%", lg: "90%", xl: "80%" }} >
         <Image src={"https://www.beautybebo.com/pub/media/ads/Blue_heaven_Forent_3-min.jpg"} />
       </Box>
       <Box>

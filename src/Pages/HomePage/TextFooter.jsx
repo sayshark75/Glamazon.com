@@ -1,4 +1,4 @@
-import { Heading, Text } from "@chakra-ui/react";
+import { Text } from "@chakra-ui/react";
 import React from "react";
 
 const TextFooter = () => {

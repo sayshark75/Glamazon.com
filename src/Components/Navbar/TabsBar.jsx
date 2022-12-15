@@ -11,10 +11,10 @@ import {
   DrawerOverlay,
   DrawerContent,
   DrawerCloseButton,
-  Grid,
   SimpleGrid,
   Button,
 } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import AccordMenu from "./AccordMenu";
 import { NavbarContext } from "../../Context/NavbarContextProvider";
@@ -25,13 +25,14 @@ const TabsBar = () => {
   const { navData } = useContext(NavbarContext);
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
+  const myNavi = useNavigate();
   return (
     <>
-      <Flex justifyContent={"space-between"} m={"auto"} w={{ base: "100%", md: "100%", lg: "90%", xl: "80%" }} p={"2"} border={"1px solid red"}>
+      <Flex justifyContent={"space-between"} m={"auto"} w={{ base: "100%", md: "100%", lg: "90%", xl: "80%" }} p={"2"}>
 
       {/* Show the Drawer */}
         <Show breakpoint="(max-width: 560px)">
-          <IconButton color={"white"} bgColor={"blackAlpha.900"} borderRadius={"0px"} ref={btnRef} onClick={onOpen} aria-label="Search database" icon={<MenuIcon />} />
+          <IconButton _hover={{ color: "Black", backgroundColor: "white" }} color={"white"} bgColor={"blackAlpha.900"} borderRadius={"0px"} ref={btnRef} onClick={onOpen} aria-label="Search database" icon={<MenuIcon />} />
           <Drawer isOpen={isOpen} placement="left" onClose={onClose} finalFocusRef={btnRef}>
             <DrawerOverlay />
             <DrawerContent>
@@ -54,7 +55,7 @@ const TabsBar = () => {
             })}
           </SimpleGrid>
         </Hide>
-        <Button borderRadius={"0px"} color={"white"} bgColor={"blackAlpha.900"}>
+        <Button _hover={{ color: "Black", backgroundColor: "white" }} onClick={()=>myNavi("/shoppingcart")} borderRadius={"0px"} color={"white"} bgColor={"blackAlpha.900"}>
           <ShoppingCartIcon /> My Cart
         </Button>
       </Flex>

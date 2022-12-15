@@ -5,7 +5,7 @@ import AlbumIcon from '@mui/icons-material/Album';
 const LinksList = ({title,list}) => {
   return (
     <>
-      <Flex border={"1px solid red"} direction={"column"}>
+      <Flex direction={"column"}>
         <Text color={"white"} fontSize='md' fontWeight={"bold"} align={"left"}>{title}</Text>
         <Text color={"white"} align={"left"}>-------</Text>
         {

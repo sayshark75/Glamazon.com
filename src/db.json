@@ -28,7 +28,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/u/n/untitled-1_10.jpg",
       "brand": "Missclaire",
       "category": "Face",
-      "random": 7
+      "random": 3
     },
     {
       "id": 4,
@@ -43,12 +43,12 @@
     {
       "id": 5,
       "name": "Miss Claire Natural Mineral Compact Powder - 33",
-      "star": 0,
+      "star": [1, 1, 1, 1, 0],
       "price": 455,
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/7/f75ac8d8903487028128_4.jpg",
       "brand": "Missclaire",
       "category": "Face",
-      "random": 8
+      "random": 2
     },
     {
       "id": 6,
@@ -68,7 +68,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/1/5/15c4ce88903487000063_2_1_1.jpg",
       "brand": "Missclaire",
       "category": "Lips",
-      "random": 9
+      "random": 1
     },
     {
       "id": 8,
@@ -78,7 +78,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/c/5/c5086c88903487018860_5.jpg",
       "brand": "Missclaire",
       "category": "Lips",
-      "random": 6
+      "random": 4
     },
     {
       "id": 9,
@@ -98,7 +98,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/1/_/1_46.jpg",
       "brand": "Missclaire",
       "category": "Nail",
-      "random": 5
+      "random": 1
     },
     {
       "id": 11,
@@ -108,7 +108,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/4/84de0238903487002357_1.jpg",
       "brand": "Missclaire",
       "category": "Brushes",
-      "random": 7
+      "random": 3
     },
     {
       "id": 12,
@@ -138,7 +138,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/0/a/0abaf79lorea00000061_8.jpg",
       "brand": "LorealParis",
       "category": "Face",
-      "random": 6
+      "random": 4
     },
     {
       "id": 15,
@@ -178,7 +178,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/6/d/6dedf796902395753216_7.jpg",
       "brand": "LorealParis",
       "category": "Eye",
-      "random": 7
+      "random": 3
     },
     {
       "id": 19,
@@ -208,7 +208,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/4/4/440_cherie_macaron.jpg",
       "brand": "LorealParis",
       "category": "Nail",
-      "random": 5
+      "random": 1
     },
     {
       "id": 22,
@@ -218,7 +218,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/u/n/untitled-143.jpg",
       "brand": "LorealParis",
       "category": "Nail",
-      "random": 7
+      "random": 3
     },
     {
       "id": 23,
@@ -238,7 +238,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/3/1/311225a8904086310782_0.jpg",
       "brand": "Other",
       "category": "Brushes",
-      "random": 5
+      "random": 1
     },
     {
       "id": 25,
@@ -248,7 +248,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/2/4/24292_s1-8901030716126.jpg",
       "brand": "Lakme",
       "category": "Face",
-      "random": 5
+      "random": 1
     },
     {
       "id": 26,
@@ -258,7 +258,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/8/58abd0dlak_8901030366727_g.jpg",
       "brand": "Lakme",
       "category": "Face",
-      "random": 5
+      "random": 1
     },
     {
       "id": 27,
@@ -268,7 +268,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/3/7/37_4_2.jpg",
       "brand": "Lakme",
       "category": "Face",
-      "random": 6
+      "random": 4
     },
     {
       "id": 28,
@@ -288,7 +288,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/4/1/412dxto0unl._sl1000_.jpg",
       "brand": "Lakme",
       "category": "Eye",
-      "random": 8
+      "random": 2
     },
     {
       "id": 30,
@@ -298,7 +298,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/2/4/24812_s1-8901030790058.jpg",
       "brand": "Lakme",
       "category": "Eye",
-      "random": 6
+      "random": 4
     },
     {
       "id": 31,
@@ -308,7 +308,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/4/1/41-2ltvphas._sl1000_.jpg",
       "brand": "Lakme",
       "category": "Lips",
-      "random": 9
+      "random": 1
     },
     {
       "id": 32,
@@ -318,7 +318,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/2/9/29246_h2_8901030897894_400x_2.jpg",
       "brand": "Lakme",
       "category": "Lips",
-      "random": 9
+      "random": 1
     },
     {
       "id": 33,
@@ -328,7 +328,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/c/h/cherry_red-3.jpg",
       "brand": "Lakme",
       "category": "Nail",
-      "random": 8
+      "random": 2
     },
     {
       "id": 34,
@@ -368,7 +368,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/_/2/.24.jpg",
       "brand": "Swiss Beauty",
       "category": "Face",
-      "random": 6
+      "random": 4
     },
     {
       "id": 38,
@@ -398,7 +398,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/s/w/sw96.jpg",
       "brand": "Swiss Beauty",
       "category": "Face",
-      "random": 9
+      "random": 1
     },
     {
       "id": 41,
@@ -408,7 +408,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/4/_/4_98_9.jpg",
       "brand": "Swiss Beauty",
       "category": "Eye",
-      "random": 8
+      "random": 2
     },
     {
       "id": 42,
@@ -438,7 +438,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/6/_/6_87_3.jpg",
       "brand": "Swiss Beauty",
       "category": "Lips",
-      "random": 5
+      "random": 1
     },
     {
       "id": 45,
@@ -448,7 +448,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/s/w/sw1.jpg",
       "brand": "Swiss Beauty",
       "category": "Brushes",
-      "random": 6
+      "random": 4
     },
     {
       "id": 46,
@@ -458,7 +458,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/1/_/1_51.jpg",
       "brand": "Swiss Beauty",
       "category": "Brushes",
-      "random": 9
+      "random": 1
     },
     {
       "id": 47,
@@ -468,7 +468,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/s/k/skin_hair_nails2.jpg",
       "brand": "Mamaearth",
       "category": "Nail",
-      "random": 7
+      "random": 3
     },
     {
       "id": 48,
@@ -508,7 +508,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/p/c/pc_1_5.jpg",
       "brand": "Ponds",
       "category": "Face",
-      "random": 5
+      "random": 1
     },
     {
       "id": 52,
@@ -528,7 +528,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/n/3/n3.jpg",
       "brand": "Ponds",
       "category": "Face",
-      "random": 6
+      "random": 4
     },
     {
       "id": 54,
@@ -538,7 +538,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/b/bb_cream1.jpg",
       "brand": "Ponds",
       "category": "Face",
-      "random": 9
+      "random": 1
     },
     {
       "id": 55,
@@ -558,7 +558,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/b/bb2.jpg",
       "brand": "Ponds",
       "category": "Face",
-      "random": 7
+      "random": 3
     },
     {
       "id": 57,
@@ -568,7 +568,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/p/c/pc_1_5.jpg",
       "brand": "Ponds",
       "category": "Face",
-      "random": 9
+      "random": 1
     },
     {
       "id": 58,
@@ -578,7 +578,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/p/1/p11.jpg",
       "brand": "Ponds",
       "category": "Face",
-      "random": 8
+      "random": 2
     },
     {
       "id": 59,
@@ -588,7 +588,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/m/a/magic_freshness1.jpg",
       "brand": "Ponds",
       "category": "Face",
-      "random": 6
+      "random": 4
     },
     {
       "id": 60,
@@ -608,7 +608,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/2/d/2d81f6a8906087779186_1.jpg",
       "brand": "Mamaearth",
       "category": "Face",
-      "random": 9
+      "random": 1
     },
     {
       "id": 62,
@@ -638,7 +638,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/3/_/3_7_1_1.jpg",
       "brand": "Mamaearth",
       "category": "Face",
-      "random": 5
+      "random": 1
     },
     {
       "id": 65,
@@ -648,7 +648,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/w/i/with_monocarton.jpg",
       "brand": "Mamaearth",
       "category": "Eye",
-      "random": 8
+      "random": 2
     },
     {
       "id": 66,
@@ -698,7 +698,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/a/faces_canada_nail_care_combo.jpg",
       "brand": "Other",
       "category": "Nail",
-      "random": 9
+      "random": 1
     },
     {
       "id": 71,
@@ -730,7 +730,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/c/b/cbd8ff48906087778509.jpg",
       "brand": "Mamaearth",
       "category": "BodyCare",
-      "random": 5
+      "random": 1
     },
     {
       "id": 2,
@@ -740,7 +740,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/e/7/e7d84ce8906087779322_1_.jpg",
       "brand": "Mamaearth",
       "category": "BodyCare",
-      "random": 6
+      "random": 4
     },
     {
       "id": 3,
@@ -750,7 +750,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/e/fec250c8906087779278_7.jpg",
       "brand": "Mamaearth",
       "category": "BodyCare",
-      "random": 6
+      "random": 4
     },
     {
       "id": 4,
@@ -770,7 +770,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/u/n/untitled-1-recovered.jpg",
       "brand": "Mamaearth",
       "category": "FaceCare",
-      "random": 9
+      "random": 1
     },
     {
       "id": 6,
@@ -800,7 +800,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/d/5d364f18906087776420_7.jpg",
       "brand": "Mamaearth",
       "category": "FaceCare",
-      "random": 7
+      "random": 3
     },
     {
       "id": 9,
@@ -830,7 +830,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/m/m/mmm108.jpg",
       "brand": "Mamaearth",
       "category": "EyeCare",
-      "random": 6
+      "random": 4
     },
     {
       "id": 12,
@@ -840,7 +840,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/7/1/71300aa8907122015290_1.jpg",
       "brand": "Other",
       "category": "EyeCare",
-      "random": 6
+      "random": 4
     },
     {
       "id": 13,
@@ -850,7 +850,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/6/f/6f830b98994993016525_8.jpg",
       "brand": "LorealParis",
       "category": "BodyCare",
-      "random": 9
+      "random": 1
     },
     {
       "id": 14,
@@ -870,7 +870,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/u/n/untitled-57.jpg",
       "brand": "LorealParis",
       "category": "BodyCare",
-      "random": 9
+      "random": 1
     },
     {
       "id": 16,
@@ -900,7 +900,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/u/n/untitled-53.jpg",
       "brand": "LorealParis",
       "category": "FaceCare",
-      "random": 5
+      "random": 1
     },
     {
       "id": 19,
@@ -950,7 +950,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/q/q/qqq.jpg",
       "brand": "LorealParis",
       "category": "EyeCare",
-      "random": 6
+      "random": 4
     },
     {
       "id": 24,
@@ -970,7 +970,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/d/dd229d127272_s1-8901030752155.jpg",
       "brand": "Lakme",
       "category": "BodyCare",
-      "random": 5
+      "random": 1
     },
     {
       "id": 26,
@@ -980,7 +980,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/1/51b15cflakme00000133__4_.jpg",
       "brand": "Lakme",
       "category": "BodyCare",
-      "random": 6
+      "random": 4
     },
     {
       "id": 27,
@@ -990,7 +990,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/l/8/l8_1.jpg",
       "brand": "Lakme",
       "category": "BodyCare",
-      "random": 9
+      "random": 1
     },
     {
       "id": 28,
@@ -1000,7 +1000,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/l/2/l2_1.jpg",
       "brand": "Lakme",
       "category": "BodyCare",
-      "random": 5
+      "random": 1
     },
     {
       "id": 29,
@@ -1010,7 +1010,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/8/b8b121clakme00000134_2_1.jpg",
       "brand": "Lakme",
       "category": "FaceCare",
-      "random": 9
+      "random": 1
     },
     {
       "id": 30,
@@ -1020,7 +1020,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/2/7/27507_s2-8901030875687_400x-_1_.jpg",
       "brand": "Lakme",
       "category": "FaceCare",
-      "random": 8
+      "random": 2
     },
     {
       "id": 31,
@@ -1030,7 +1030,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/l/1/l11.png",
       "brand": "Lakme",
       "category": "FaceCare",
-      "random": 8
+      "random": 2
     },
     {
       "id": 32,
@@ -1050,7 +1050,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/n/i/night_revival_eye_cr_me1.jpg",
       "brand": "Lakme",
       "category": "EyeCare",
-      "random": 5
+      "random": 1
     },
     {
       "id": 34,
@@ -1100,7 +1100,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/8/8801008122969_1__1_.jpg",
       "brand": "Other",
       "category": "BodyCare",
-      "random": 8
+      "random": 2
     },
     {
       "id": 39,
@@ -1160,7 +1160,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/d/5d9fdf53401561197715.jpg",
       "brand": "Other",
       "category": "FaceCare",
-      "random": 6
+      "random": 4
     },
     {
       "id": 45,
@@ -1170,7 +1170,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/u/n/untitled-37.jpg",
       "brand": "Other",
       "category": "EyeCare",
-      "random": 5
+      "random": 1
     },
     {
       "id": 46,
@@ -1180,7 +1180,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/z/_/z_1.jpg",
       "brand": "Other",
       "category": "EyeCare",
-      "random": 9
+      "random": 1
     },
     {
       "id": 47,
@@ -1190,7 +1190,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/k/_/k_1_.jpg",
       "brand": "Other",
       "category": "EyeCare",
-      "random": 6
+      "random": 4
     },
     {
       "id": 48,
@@ -1200,7 +1200,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/1/_/1_139.jpg",
       "brand": "Other",
       "category": "EyeCare",
-      "random": 7
+      "random": 3
     },
     {
       "id": 49,
@@ -1230,7 +1230,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/g/f/gfsdgfdgfdgfdgdg.jpg",
       "brand": "Ponds",
       "category": "BodyCare",
-      "random": 9
+      "random": 1
     },
     {
       "id": 52,
@@ -1240,7 +1240,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/b/bbj0001902-2.jpg",
       "brand": "Ponds",
       "category": "BodyCare",
-      "random": 6
+      "random": 4
     },
     {
       "id": 53,
@@ -1250,7 +1250,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/8/d85648627520_s1-8901030881978.jpg",
       "brand": "Ponds",
       "category": "FaceCare",
-      "random": 7
+      "random": 3
     },
     {
       "id": 54,
@@ -1290,7 +1290,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/p/n/pndssss.jpg",
       "brand": "Ponds",
       "category": "EyeCare",
-      "random": 9
+      "random": 1
     },
     {
       "id": 58,
@@ -1300,7 +1300,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/1/7/1777b1elotus00000016_p.jpg",
       "brand": "Other",
       "category": "EyeCare",
-      "random": 6
+      "random": 4
     },
     {
       "id": 59,
@@ -1320,7 +1320,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/2/b28.jpg",
       "brand": "Other",
       "category": "EyeCare",
-      "random": 9
+      "random": 1
     },
     {
       "id": 61,
@@ -1350,7 +1350,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/0/f0be50c8906087779261_7.jpg",
       "brand": "Mamaearth",
       "category": "BodyCare",
-      "random": 5
+      "random": 1
     },
     {
       "id": 64,
@@ -1370,7 +1370,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/u/n/untitled-227.jpg",
       "brand": "Mamaearth",
       "category": "FaceCare",
-      "random": 7
+      "random": 3
     },
     {
       "id": 66,
@@ -1390,7 +1390,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/u/n/untitled-1-recovered.jpg",
       "brand": "Mamaearth",
       "category": "FaceCare",
-      "random": 6
+      "random": 4
     },
     {
       "id": 68,
@@ -1400,7 +1400,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/9/0/9066ff48906087778479.jpg",
       "brand": "Mamaearth",
       "category": "FaceCare",
-      "random": 9
+      "random": 1
     },
     {
       "id": 69,
@@ -1410,7 +1410,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/1/9/19_12_4.jpg",
       "brand": "Mamaearth",
       "category": "EyeCare",
-      "random": 5
+      "random": 1
     },
     {
       "id": 70,
@@ -1430,17 +1430,17 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/m/m/mmm108.jpg",
       "brand": "Mamaearth",
       "category": "EyeCare",
-      "random": 8
+      "random": 2
     },
     {
       "id": 72,
-      "name": "Olay Ultimate Eye Cream (Dark Circles Wrinkles",
+      "name": "Olay Ultimate Eye Cream Dark Circles Wrinkles",
       "star": [1, 1, 1, 1, 0],
       "price": 1614,
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/u/_/u.jpg",
       "brand": "Mamaearth",
       "category": "EyeCare",
-      "random": 7
+      "random": 3
     }
   ],
   "slider": [
@@ -1482,7 +1482,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/s/w/sw96.jpg",
       "brand": "Swiss Beauty",
       "category": "Face",
-      "random": 9
+      "random": 1
     },
     {
       "id": 47,
@@ -1492,7 +1492,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/s/k/skin_hair_nails2.jpg",
       "brand": "Mamaearth",
       "category": "Nail",
-      "random": 7
+      "random": 3
     },
     {
       "id": 53,
@@ -1502,7 +1502,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/n/3/n3.jpg",
       "brand": "Ponds",
       "category": "Face",
-      "random": 6
+      "random": 4
     },
     {
       "id": 70,
@@ -1512,7 +1512,7 @@
       "image": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/f/a/faces_canada_nail_care_combo.jpg",
       "brand": "Other",
       "category": "Nail",
-      "random": 9
+      "random": 1
     },
     {
       "id": 71,
