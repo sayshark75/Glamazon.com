@@ -19,9 +19,9 @@ import {
 import FilterImg from "../../Assets/FilterBox.jpg";
 import StarsIcon from "@mui/icons-material/Stars";
 
-const AccordSection = ({ catData }) => {
+const AccordSection = () => {
   const labelStyles = {
-    mt: '2.5',
+    mt: '0',
     ml: '-2.4',
     fontSize: 'sm',
   }
@@ -39,9 +39,11 @@ const AccordSection = ({ catData }) => {
           </h2>
           <AccordionPanel pb={4}>
             <Flex direction={"column"}>
-              {catData.map((el, id) => {
-                return <Checkbox key={id}>{el}</Checkbox>;
-              })}
+              <Checkbox>Face</Checkbox>
+              <Checkbox>Eye</Checkbox>
+              <Checkbox>Lips</Checkbox>
+              <Checkbox>Nail</Checkbox>
+              <Checkbox>Tools & Brush</Checkbox>
             </Flex>
           </AccordionPanel>
         </AccordionItem>
@@ -95,30 +97,13 @@ const AccordSection = ({ catData }) => {
             </AccordionButton>
           </h2>
           <AccordionPanel pb={4}>
-            <Slider defaultValue={0} min={0} max={80} step={20}>
-              <SliderTrack bg="blackAlpha.300">
-                <Box position="relative" right={10} />
-                <SliderFilledTrack bg="blackAlpha.900" />
-              </SliderTrack>
-              <SliderMark value={0} {...labelStyles}>
-                1
-              </SliderMark>
-              <SliderMark value={20} {...labelStyles}>
-                2
-              </SliderMark>
-              <SliderMark value={40} {...labelStyles}>
-                3
-              </SliderMark>
-              <SliderMark value={60} {...labelStyles}>
-                4
-              </SliderMark>
-              <SliderMark value={80} {...labelStyles}>
-                5
-              </SliderMark>
-              <SliderThumb boxSize={6}>
-                <StarsIcon />
-              </SliderThumb>
-            </Slider>
+          <Flex direction={"column"}>
+              <Checkbox>1</Checkbox>
+              <Checkbox>2</Checkbox>
+              <Checkbox>3</Checkbox>
+              <Checkbox>4</Checkbox>
+              <Checkbox>5</Checkbox>
+            </Flex>
           </AccordionPanel>
         </AccordionItem>
       </Accordion>

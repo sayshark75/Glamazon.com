@@ -11,7 +11,7 @@ const TabMenu = ({path, heading, subData,imgSrc }) => {
   return (
     <>
       <Menu isOpen={isOpen}>
-        <MenuButton onClick={()=>{myNavi(path)}} onMouseEnter={onOpen} onMouseLeave={onClose} borderRadius={"0px"} bgColor={"blackAlpha.900"} color={"white"} as={Button}>
+        <MenuButton _hover={{ color: "Black", backgroundColor: "white" }} onClick={()=>{myNavi(path)}} onMouseEnter={onOpen} onMouseLeave={onClose} borderRadius={"0px"} bgColor={"blackAlpha.900"} color={"white"} as={Button}>
         <Flex justifyContent={"center"} alignItems={"center"} gap={"1"}>
           
         {heading} {!isOpen ? <KeyboardArrowDownIcon /> : <KeyboardArrowUpIcon />}

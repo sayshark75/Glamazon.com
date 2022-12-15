@@ -12,7 +12,7 @@ import Card from "./Card";
 const SliderComp = () => {
   const sliderData = data.slider;
   return (
-    <Box m={"auto"} w={{ base: "100%", md: "100%", lg: "90%", xl: "80%" }} border={"1px solid blue"}>
+    <Box m={"auto"} w={{ base: "100%", md: "100%", lg: "90%", xl: "80%" }} >
       <Box w={"fit-content"} borderBottom={"2px solid black"}>
         <Text as="b">HOT DEALS</Text>
       </Box>
@@ -22,7 +22,7 @@ const SliderComp = () => {
         spaceBetween={10}
         slidesPerView={1}
         autoplay={{
-          delay: 1000,
+          delay: 3000,
           disableOnInteraction: false,
           pauseOnMouseEnter: true,
         }}
@@ -49,7 +49,7 @@ const SliderComp = () => {
         {sliderData.map((el, id) => {
           return (
             <SwiperSlide key={id}>
-              <Card {...el} />
+              <Card key={id} obj={el} />
             </SwiperSlide>
           );
         })}

@@ -9,9 +9,9 @@ const SocialIcons = () => {
     <>
       {/* Social Media Icons Buttons */}
       <Flex p={"3"} m={"auto"} w={{ base: "100%", md: "100%", lg: "90%", xl: "80%" }} gap={{ base: "1", md: "2", lg: "4" }}>
-          <IconButton aria-label="Search database" icon={<FacebookIcon fontSize="large" />} />
-          <IconButton aria-label="Search database" icon={<InstagramIcon fontSize="large" />} />
-          <IconButton aria-label="Search database" icon={<TwitterIcon fontSize="large" />} />
+          <IconButton _hover={{ color: "Black", backgroundColor: "white" }} aria-label="Search database" icon={<FacebookIcon fontSize="large" />} />
+          <IconButton _hover={{ color: "Black", backgroundColor: "white" }} aria-label="Search database" icon={<InstagramIcon fontSize="large" />} />
+          <IconButton _hover={{ color: "Black", backgroundColor: "white" }} aria-label="Search database" icon={<TwitterIcon fontSize="large" />} />
         </Flex>
         <Divider w={{ base: "100%", md: "100%", lg: "90%", xl: "80%" }} borderColor={"white"} m={"auto"} />
     </>

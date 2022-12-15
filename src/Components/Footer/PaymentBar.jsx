@@ -6,7 +6,7 @@ const PaymentBar = () => {
   return (
     <>
       {/* Payment and News Letter Bar */}
-      <SimpleGrid m={"auto"} w={{ base: "100%", md: "100%", lg: "90%", xl: "80%" }} columns={{base:"1",md:"1",lg:"2"}} border={"1px solid green"}>
+      <SimpleGrid m={"auto"} w={{ base: "100%", md: "100%", lg: "90%", xl: "80%" }} columns={{base:"1",md:"1",lg:"2"}} >
           <Flex justifyContent={"center"} w={{ base: "100%", md: "100%", lg: "90%", xl: "80%" }}>
             <Image src="https://www.beautybebo.com/pub/media/wysiwyg/payment.png" />
           </Flex>
@@ -16,7 +16,7 @@ const PaymentBar = () => {
             </Text>
             <Flex>
               <Input w={{ base: "", sm: "", md: "300px" }} bgColor={"white"} borderRadius={"0px"} placeholder="Enter Your Email" />
-              <IconButton aria-label="Search database" borderRadius={"0px"} icon={<SearchIcon />} />
+              <IconButton _hover={{ color: "Black", backgroundColor: "white" }} aria-label="Search database" borderRadius={"0px"} icon={<SearchIcon />} />
             </Flex>
           </Flex>
         </SimpleGrid>
