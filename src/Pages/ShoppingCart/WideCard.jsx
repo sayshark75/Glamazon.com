@@ -2,8 +2,11 @@ import { Box, Button, Flex, Image, PinInput, PinInputField, Show, Spinner, Text,
 import React, { useState } from "react";
 import StarIcon from "@mui/icons-material/Star";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
+import clickBeep from "../../Assets/click.mp3"
+import useSound from "use-sound";
 
 const WideCard = ({obj,removeData}) => {
+  const [play] = useSound(clickBeep,{volume:0.5})
   const toast = useToast();
 
   const [removeLoad,setRemoveLoad] = useState(false);
@@ -12,6 +15,7 @@ const WideCard = ({obj,removeData}) => {
   const { name, star, price,category, image, brand,id } = obj;
 
   const handleRemove =async () => {
+    play();
     setRemoveLoad(true);
     await removeData(id)
     toast({
