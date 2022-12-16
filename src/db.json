@@ -1735,7 +1735,7 @@
   },
   "login": [
     {
-      "id": "1",
+      "id": 1,
       "username": "SayyedSharuk",
       "password": "sharuk@123",
       "token": "T-@26473847&56374836$"
@@ -1743,7 +1743,7 @@
   ],
   "admin": [
     {
-      "id": "1",
+      "id": 1,
       "username": "SayyedSharuk",
       "password": "sharuk@123",
       "token": "T-@26473847&56374836$"
@@ -1751,7 +1751,7 @@
   ],
   "register": [
     {
-      "id": "1",
+      "id": 1,
       "name": "Sayyed Sharuk",
       "username": "SayyedSharuk",
       "email": "sayyedsharuk75@gmail.com",

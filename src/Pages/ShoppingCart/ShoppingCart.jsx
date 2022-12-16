@@ -1,5 +1,13 @@
 import React, { useEffect } from "react";
-import { Box, Button, Divider, Flex, Hide, Spinner, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Divider,
+  Flex,
+  Hide,
+  Spinner,
+  Text,
+} from "@chakra-ui/react";
 import WideCard from "./WideCard";
 import { deleteData, getData } from "../../Api/Requests.js";
 import { useState } from "react";
@@ -29,16 +37,21 @@ const ShoppingCart = () => {
   };
 
   const removeData = async (id) => {
-    
-    const myData =await deleteData(`/shoppingcart`,id);
-    console.log('Removed Data Response: ', myData);
+    const myData = await deleteData(`/shoppingcart`, id);
+    console.log("Removed Data Response: ", myData);
     await getCartData();
-  }
+  };
 
   return (
     <>
       {loading ? (
-        <Spinner thickness="4px" speed="0.65s" emptyColor="gray.200" color="blackAlpha.900" size="xl" />
+        <Spinner
+          thickness="4px"
+          speed="0.65s"
+          emptyColor="gray.200"
+          color="blackAlpha.900"
+          size="xl"
+        />
       ) : data.length !== 0 ? (
         <Flex
           direction={{ base: "column", sm: "column", lg: "row" }}
@@ -49,19 +62,26 @@ const ShoppingCart = () => {
           p={"1"}
         >
           {/* Flex All WideCard Container */}
-          <Flex p={"2"} direction={"column"} w={{ base: "100%", md: "100%", lg: "70%" }}>
+          <Flex
+            p={"2"}
+            direction={"column"}
+            w={{ base: "100%", md: "100%", lg: "70%" }}
+          >
             <Text fontSize="xl" align={"left"}>
               SHOPPING CART
             </Text>
             {/* Top Title COntainer */}
-            <Flex  p={"1"} justifyContent={"space-between"}>
-              <Flex  w={{ base: "100%", md: "100%", lg: "70%" }}>
+            <Flex p={"1"} justifyContent={"space-between"}>
+              <Flex w={{ base: "100%", md: "100%", lg: "70%" }}>
                 <Text as={"b"} fontSize="sm">
                   ITEM
                 </Text>
               </Flex>
-                <Hide below="lg">
-              <Flex  w={{ base: "100%", md: "100%", lg: "30%" }} justifyContent={"space-evenly"}>
+              <Hide below="lg">
+                <Flex
+                  w={{ base: "100%", md: "100%", lg: "30%" }}
+                  justifyContent={"space-evenly"}
+                >
                   <Text as={"b"} fontSize="sm">
                     PRICE
                   </Text>
@@ -71,8 +91,8 @@ const ShoppingCart = () => {
                   <Text as={"b"} fontSize="sm">
                     TOTAL
                   </Text>
-              </Flex>
-                </Hide>
+                </Flex>
+              </Hide>
             </Flex>
             {/* Simple Border Bottom */}
             <Box mb={"3"} bgColor={"gray.700"} p={"0.4"}></Box>
@@ -80,7 +100,12 @@ const ShoppingCart = () => {
             {data.map((el, id) => {
               return (
                 <>
-                  <WideCard key={id} removeData={removeData} total={total} obj={el} />
+                  <WideCard
+                    key={id}
+                    removeData={removeData}
+                    total={total}
+                    obj={el}
+                  />
                   <Divider mb={"2"} key={id} />
                 </>
               );
@@ -89,7 +114,15 @@ const ShoppingCart = () => {
 
           {/* Summary Section */}
           <Flex w={{ base: "100%", md: "100%", lg: "30%" }}>
-            <Flex p={2} borderRadius={"5px"} gap={"4"} w={"100%"} direction={"column"} m={"2"} border={"1px solid gray"}>
+            <Flex
+              p={2}
+              borderRadius={"5px"}
+              gap={"4"}
+              w={"100%"}
+              direction={"column"}
+              m={"2"}
+              border={"1px solid gray"}
+            >
               <Text as={"b"} align={"left"}>
                 SUMMARY
               </Text>
@@ -113,7 +146,13 @@ const ShoppingCart = () => {
               <Divider />
 
               <Flex justifyContent={"center"}>
-                <Button _hover={{ color: "Black", backgroundColor: "white" }} borderRadius={"0px"} bgColor={"blackAlpha.900"} color={"white"}>
+                <Button
+                  onClick={() => myNavi("/payment")}
+                  _hover={{ color: "Black", backgroundColor: "white" }}
+                  borderRadius={"0px"}
+                  bgColor={"blackAlpha.900"}
+                  color={"white"}
+                >
                   PROCEED TO CHECKOUT
                 </Button>
               </Flex>
@@ -121,11 +160,23 @@ const ShoppingCart = () => {
           </Flex>
         </Flex>
       ) : (
-        <Flex h={"200px"} m={"5"} alignItems={"center"} justifyContent="space-evenly" direction={"column"}>
+        <Flex
+          h={"200px"}
+          m={"5"}
+          alignItems={"center"}
+          justifyContent="space-evenly"
+          direction={"column"}
+        >
           <Text fontSize="xl" align={"center"}>
             Your Shopping Cart is Empty, Want to Buy Something?
           </Text>
-          <Button _hover={{ color: "Black", backgroundColor: "white" }} onClick={() => myNavi("/makeup")} borderRadius={"0px"} bgColor={"blackAlpha.900"} color={"white"}>
+          <Button
+            _hover={{ color: "Black", backgroundColor: "white" }}
+            onClick={() => myNavi("/makeup")}
+            borderRadius={"0px"}
+            bgColor={"blackAlpha.900"}
+            color={"white"}
+          >
             Back to Shopping...
           </Button>
         </Flex>
