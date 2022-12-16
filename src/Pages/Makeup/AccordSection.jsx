@@ -9,22 +9,11 @@ import {
   Checkbox,
   Flex,
   Text,
-  Slider,
-  SliderTrack,
-  SliderFilledTrack,
-  SliderThumb,
   Image,
-  SliderMark,
 } from "@chakra-ui/react";
 import FilterImg from "../../Assets/FilterBox.jpg";
-import StarsIcon from "@mui/icons-material/Stars";
 
 const AccordSection = () => {
-  const labelStyles = {
-    mt: '0',
-    ml: '-2.4',
-    fontSize: 'sm',
-  }
   return (
     <>
       <Accordion allowMultiple>

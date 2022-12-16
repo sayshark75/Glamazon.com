@@ -68,8 +68,9 @@ const Card = ({ obj }) => {
               onClick={() => setCartData(obj, "s")}
               borderRadius={"0px"}
               bgColor={"blackAlpha.900"}
+              color="white"
               aria-label="Search database"
-              icon={shopLoad ? <Spinner size="sm" color="white" /> : <AddShoppingCartIcon sx={{ color: "white" }} />}
+              icon={shopLoad ? <Spinner size="sm" color="white" /> : <AddShoppingCartIcon />}
             />
 
             {/* Wishlist */}
@@ -78,8 +79,9 @@ const Card = ({ obj }) => {
               onClick={() => setCartData(obj, "w")}
               borderRadius={"0px"}
               bgColor={"blackAlpha.900"}
+              color="white"
               aria-label="Search database"
-              icon={wishLoad ? <Spinner size="sm" color="white" /> : <FavoriteIcon sx={{ color: "white" }} />}
+              icon={wishLoad ? <Spinner size="sm" color="white" /> : <FavoriteIcon />}
             />
           </Flex>
         </Flex>

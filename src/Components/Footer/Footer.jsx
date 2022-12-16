@@ -26,11 +26,10 @@ const Footer = () => {
         </SimpleGrid>
 
         <SocialIcons />
-        
-        <PaymentBar/>
-        
-        <CopyrightBar/>
-        
+
+        <PaymentBar />
+
+        <CopyrightBar />
       </Box>
     </>
   );
