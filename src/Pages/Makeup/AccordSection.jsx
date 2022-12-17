@@ -33,6 +33,7 @@ const AccordSection = () => {
               <Checkbox>Lips</Checkbox>
               <Checkbox>Nail</Checkbox>
               <Checkbox>Tools & Brush</Checkbox>
+              
             </Flex>
           </AccordionPanel>
         </AccordionItem>
