@@ -1762,9 +1762,12 @@
   ],
   "shoppingcart": [],
   "wishlist": [],
-  "Address": [
+  "address": [
     {
       "id": 1,
+      "username": "SayyedSharuk",
+      "name": "Sayyed Sharuk",
+      "email": "sayyedsharuk75@gmail.com",
       "houseno": "493",
       "street": "Banesaheb Patangan, DelhiGate, Ahmednagar",
       "city": "Ahmednagar",
@@ -1773,5 +1776,6 @@
       "pincode": 414001,
       "phone": 7588244148
     }
-  ]
+  ],
+  "payment":[7557,1221,4334,5665,2552]
 }

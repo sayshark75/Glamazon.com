@@ -67,6 +67,10 @@ const LoginPopup = ({ isOpen, onClose }) => {
     myNavi("/auth");
     onClose();
   };
+  const handleAdminDirection = () => {
+    myNavi("/admin");
+    onClose();
+  };
   return (
     <>
       <Modal isOpen={isOpen} onClose={onClose}>
@@ -115,6 +119,16 @@ const LoginPopup = ({ isOpen, onClose }) => {
                 }}
               >
                 Dosen't Have a Account?, Register
+              </Link>
+            <Link
+                mt={"2"}
+                _hover={{ color: "Black", backgroundColor: "white" }}
+                borderRadius={"0px"}
+                onClick={() => {
+                  handleAdminDirection();
+                }}
+              >
+                Admin?
               </Link>
             </Flex>
           </ModalFooter>
