@@ -1,7 +1,32 @@
 import { Flex } from "@chakra-ui/react";
-import React from "react";
+import React, { useContext, useState } from "react";
+import { useEffect } from "react";
+import { getData } from "../../Api/Requests";
+import { AuthContext } from "../../Context/AuthContextProvider";
+import AddressComp from "./AddressComp";
+import CardDetails from "./CardDetails";
+import ShowAddress from "./ShowAddress";
 
 const PaymentPage = () => {
+  const { Authuser } = useContext(AuthContext);
+  const [addrData, setAddrData] = useState({});
+  const [isAddrPresent, setAddrPresent] = useState(false);
+  
+
+  useEffect(() => {
+    getUserAddress();
+  });
+  const getUserAddress = async () => {
+    const myData = await getData(`/address?username=${Authuser}`);
+    myData.length === 0 ? setAddrPresent(false) : setAddrPresent(true);
+    setAddrData(myData[0]);
+  };
+
+  const handleAddrData = (obj) => {
+    setAddrData(obj);
+    setAddrPresent(true);
+  };
+
   return (
     <>
       <Flex
@@ -13,15 +38,10 @@ const PaymentPage = () => {
         border={"1px solid red"}
         p={"1"}
       >
-        <Flex p={"5"} w={{ base: "100%", md: "100%", lg: "50%" }} border={"1px solid red"} direction={"column"}>
+        {/* Address Form Section */}
+        {!isAddrPresent ? <AddressComp handleAddrData={handleAddrData} /> : <ShowAddress addrData={addrData}/>}
 
-
-
-        </Flex>
-        <Flex p={"2"} w={{ base: "100%", md: "100%", lg: "50%" }} border={"1px solid red"} direction={"column"}>
-
-        </Flex>
-
+        <CardDetails/>
       </Flex>
     </>
   );

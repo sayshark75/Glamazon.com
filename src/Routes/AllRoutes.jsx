@@ -7,7 +7,7 @@ import MakeUp from "../Pages/Makeup/MakeUp";
 import PaymentPage from "../Pages/PaymentPage/PaymentPage";
 import ShoppingCart from "../Pages/ShoppingCart/ShoppingCart";
 import WishListPage from "../Pages/WishListPage/WishListPage";
-
+import PrivateRoute from "./PrivateRoute";
 
 const AllRoutes = () => {
   return (
@@ -17,7 +17,14 @@ const AllRoutes = () => {
         <Route path="/makeup" element={<MakeUp />} />
         <Route path="/shoppingcart" element={<ShoppingCart />} />
         <Route path="/wishlist" element={<WishListPage />} />
-        <Route path="/payment" element={<PaymentPage />} />
+        <Route
+          path="/payment"
+          element={
+            <PrivateRoute>
+              <PaymentPage />
+            </PrivateRoute>
+          }
+        />
         <Route path="/auth" element={<AuthComp />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
