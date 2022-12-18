@@ -19,7 +19,7 @@ const CardDetails = () => {
 
   return (
     <>
-      <Flex p={"12"} w={{ base: "100%", md: "100%", lg: "50%" }} border={"1px solid red"} direction={"column"}>
+      <Flex p={"12"} w={{ base: "100%", md: "100%", lg: "50%" }}  direction={"column"}>
         <Text mb={"4"} align={"left"} as={"b"} fontSize={"lg"}>
           Enter Card Details
         </Text>

@@ -41,7 +41,7 @@ const WideCard = ({obj,removeData}) => {
           <Flex gap={"2"}  direction={"column"}>
             <Image w={"100%"} src={image} alt="hello" />
             <Button _hover={{ color: "Black", backgroundColor: "white" }} onClick={handleRemove} borderRadius={"0px"} bgColor={"blackAlpha.900"} color={"white"}>
-              {removeLoad?<Spinner size="sm" color='white' />:"Remove"}
+              {removeLoad?<Spinner size="sm" />:"Remove"}
             </Button>
           </Flex>
 

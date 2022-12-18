@@ -19,7 +19,7 @@ const PrivateRoute = ({ children, text }) => {
     setTimeout(()=>{
       myNavi("/auth")
     },3000);
-    return <Spinner size="lg" color="black" />;
+    return <Spinner thickness="4px" speed="0.65s" emptyColor="gray.200" color="blackAlpha.900" size="xl" />;
   }
   return children;
 };

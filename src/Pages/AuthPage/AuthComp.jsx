@@ -105,10 +105,9 @@ const AuthComp = () => {
         justifyContent={"flex-start"}
         m={"auto"}
         w={{ base: "100%", md: "100%", lg: "90%", xl: "80%" }}
-        border={"1px solid red"}
         p={"1"}
       >
-        <Flex w={{ base: "100%", md: "100%", lg: "50%" }} border={"1px solid red"} direction={"column"}>
+        <Flex w={{ base: "100%", md: "100%", lg: "50%" }}  direction={"column"}>
           <Text fontSize={"lg"} mb={"4"} align={"left"}>
             Create An Account
           </Text>
@@ -167,7 +166,7 @@ const AuthComp = () => {
                 onClick={handleSubmit} w="100%" mt={"4"}
                 _hover={{ color: "Black", backgroundColor: "white" }} borderRadius={"0px"} color={"white"} bgColor={"black"} mr={3}
               >
-                {accLoad ? <Spinner size="sm" color="white" /> : "Create Account"}
+                {accLoad ? <Spinner size="sm" /> : "Create Account"}
               </Button>
             </Flex>
           </FormControl>
@@ -179,7 +178,7 @@ const AuthComp = () => {
 
         {/* Login Section */}
 
-        <Flex p={"3"} direction={"column"} border={"1px solid red"} w={{ base: "100%", md: "100%", lg: "50%" }}>
+        <Flex p={"3"} direction={"column"} w={{ base: "100%", md: "100%", lg: "50%" }}>
           <Text fontSize={"lg"} mb={"4"} align={"left"}>Already Have an Account? Login</Text>
           <FormControl>
               <FormLabel>Enter Username</FormLabel>
@@ -207,7 +206,7 @@ const AuthComp = () => {
 
             <Flex w={"100%"} direction={"column"}>
               <Button mt={"4"} w={"100%"} _hover={{ color: "Black", backgroundColor: "white" }} borderRadius={"0px"} color={"white"} bgColor={"black"} mr={3} onClick={handleAuthLogin}>
-                {loadLogin ? <Spinner size="sm" color="white" /> : "Log In"}
+                {loadLogin ? <Spinner size="sm"/> : "Log In"}
               </Button>
             </Flex>
           </Flex>

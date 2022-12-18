@@ -70,7 +70,7 @@ const Card = ({ obj }) => {
               bgColor={"blackAlpha.900"}
               color="white"
               aria-label="Search database"
-              icon={shopLoad ? <Spinner size="sm" color="white" /> : <AddShoppingCartIcon />}
+              icon={shopLoad ? <Spinner size="sm" /> : <AddShoppingCartIcon />}
             />
 
             {/* Wishlist */}
@@ -81,7 +81,7 @@ const Card = ({ obj }) => {
               bgColor={"blackAlpha.900"}
               color="white"
               aria-label="Search database"
-              icon={wishLoad ? <Spinner size="sm" color="white" /> : <FavoriteIcon />}
+              icon={wishLoad ? <Spinner size="sm"  /> : <FavoriteIcon />}
             />
           </Flex>
         </Flex>
