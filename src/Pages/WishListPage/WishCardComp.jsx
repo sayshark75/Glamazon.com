@@ -71,10 +71,10 @@ const WishCardComp = ({ obj,AddToCart, removeData }) => {
         </Flex>
         <Flex gap={"2"} direction={"column"}>
           <Button _hover={{ color: "Black", backgroundColor: "white" }} onClick={handleRemove} borderRadius={"0px"} bgColor={"blackAlpha.900"} color={"white"}>
-            {removeLoad ? <Spinner size="sm" color="white" /> : "Remove"}
+            {removeLoad ? <Spinner size="sm" /> : "Remove"}
           </Button>
           <Button _hover={{ color: "Black", backgroundColor: "white" }} onClick={handleMoveToCart} borderRadius={"0px"} bgColor={"blackAlpha.900"} color={"white"}>
-            {cartLoad ? <Spinner size="sm" color="white" /> : "Add To Shopping Bag"}
+            {cartLoad ? <Spinner size="sm"  /> : "Add To Shopping Bag"}
           </Button>
         </Flex>
       </Flex>

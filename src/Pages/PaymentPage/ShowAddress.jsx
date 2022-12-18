@@ -5,7 +5,7 @@ const ShowAddress = ({ addrData }) => {
   const { name, houseno, street, city, State, country, pincode, phone } = addrData;
   return (
     <>
-      <Flex p={"5"} w={{ base: "100%", md: "100%", lg: "50%" }} border={"1px solid red"} direction={"column"}>
+      <Flex p={"5"} w={{ base: "100%", md: "100%", lg: "50%" }}  direction={"column"}>
       <Avatar size='xl' name={name} src="https://bit.ly/broken-link" />
         <Text my={"4"} align={"left"} as={"b"} fontSize={"lg"}>
           To ,

@@ -108,7 +108,7 @@ const LoginPopup = ({ isOpen, onClose }) => {
           <ModalFooter>
             <Flex w={"100%"} direction={"column"}>
               <Button _hover={{ color: "Black", backgroundColor: "white" }} borderRadius={"0px"} color={"white"} bgColor={"black"} mr={3} onClick={handleAuthLogin}>
-                {loadLogin ? <Spinner size="sm" color="white" /> : "Log In"}
+                {loadLogin ? <Spinner size="sm" /> : "Log In"}
               </Button>
               <Link
                 mt={"2"}

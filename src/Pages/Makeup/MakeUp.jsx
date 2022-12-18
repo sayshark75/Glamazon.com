@@ -9,16 +9,19 @@ import PaginationComp from "./PaginationComp";
 const MakeUp = () => {
   const [data, setData] = useState([]);
   const [isLoading, setLoading] = useState(true);
+  const [page, setPage] = useState(1);
+  const [totalPage, setTotalpage] = useState(1);
 
   useEffect(() => {
     setLoading(true);
-    getMakeupData(`/makeup?_page=1&_limit=9&random=1`);
-  }, []);
+    getMakeupData(`/makeup?_page=${page}&_limit=9&random=1`);
+  }, [page]);
 
   const getMakeupData = async (url) => {
     const makeupData = await getData(url);
     console.log("makeupData: ", makeupData);
     setData(makeupData);
+    setTotalpage(Math.floor(27 / makeupData.length));
     setLoading(false);
   };
 
@@ -29,19 +32,19 @@ const MakeUp = () => {
       ) : (
         <Flex m={"auto"} mt={"2"} w={{ base: "100%", md: "100%", lg: "90%", xl: "80%" }}>
           {/* Category and Filters */}
-          <Flex direction={"column"} w={{base:"200px",sm:"200px",md:"25%"}}>
+          <Flex direction={"column"} w={{ base: "200px", sm: "200px", md: "25%" }}>
             <AccordSection />
           </Flex>
 
           <Flex direction={"column"} alignItems={"flex-end"} p={"4"} w={"75%"}>
-            <PaginationComp />
+            <PaginationComp setPage={setPage} totalPage={totalPage} page={page} />
             {/* Grid Section */}
-            <SimpleGrid columns={{base:"1",sm:"2",md:"3",}} spacing={"4"}>
+            <SimpleGrid columns={{ base: "1", sm: "2", md: "3" }} spacing={"4"}>
               {data.map((el, id) => {
                 return <Card key={id} obj={el} />;
               })}
             </SimpleGrid>
-            <PaginationComp />
+            <PaginationComp setPage={setPage} totalPage={totalPage} page={page} />
           </Flex>
         </Flex>
       )}

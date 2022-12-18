@@ -35,7 +35,7 @@ const PaymentPage = () => {
         justifyContent={"flex-start"}
         m={"auto"}
         w={{ base: "100%", md: "100%", lg: "90%", xl: "80%" }}
-        border={"1px solid red"}
+        
         p={"1"}
       >
         {/* Address Form Section */}

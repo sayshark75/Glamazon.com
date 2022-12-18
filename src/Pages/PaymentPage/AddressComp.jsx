@@ -56,7 +56,7 @@ const AddressComp = () => {
 
   return (
     <>
-      <Flex p={"5"} w={{ base: "100%", md: "100%", lg: "50%" }} border={"1px solid red"} direction={"column"}>
+      <Flex p={"5"} w={{ base: "100%", md: "100%", lg: "50%" }}  direction={"column"}>
         <Text mb={"4"} align={"left"} as={"b"} fontSize={"lg"}>
           Please Fill Address Details
         </Text>
@@ -97,7 +97,7 @@ const AddressComp = () => {
         </Text>
         <Input value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="Mobile No." />
         <Button onClick={handleSubmit} my={"4"} _hover={{ color: "Black", backgroundColor: "white" }} borderRadius={"0px"} color={"white"} bgColor={"black"}>
-          {load?<Spinner size="sm" color="white" />:"Set Address"}
+          {load?<Spinner size="sm"  />:"Set Address"}
         </Button>
       </Flex>
     </>
