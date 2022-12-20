@@ -9,7 +9,7 @@ Glamazon is an Ecommerce Website, which sells Beauty Products Online.
 
 Use NPM to Install 
 
-```bash
+```
 npm install
 ```
  Home Page : : Contains Carousel and Slider.
