@@ -24,23 +24,5 @@ npm install
 
 Pull requests are welcome. For significant changes, please open an issue first
 to discuss what you would like to change.
-
-## :lady_beetle: Bugs : : List of Changes To Made
-
- :x: Changing Address in Payment Section
- 
- :x: Form Validations and Form Handling
- 
- :x: Add Some More Things in Home Page
- 
- :x: Remaining Navbar Links, Add Page and Its Routes
- 
- :x: Search Bar Debouncing
- 
- :x: Quantity of Product in Shopping Bar
- 
- :x: More Payment Methods
- 
- :x: Manage DB using Admin Panel
  
 
