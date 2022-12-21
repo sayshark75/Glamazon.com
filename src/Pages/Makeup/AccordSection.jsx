@@ -1,38 +1,35 @@
 import React from "react";
-import {
-  Box,
-  Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionPanel,
-  AccordionIcon,
-  Checkbox,
-  Flex,
-  Text,
-  Image,
-} from "@chakra-ui/react";
+import { Box, Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon, Flex, Text, Image, RadioGroup, Radio } from "@chakra-ui/react";
 import FilterImg from "../../Assets/FilterBox.jpg";
+import { useState } from "react";
 
 const AccordSection = () => {
+  const [category, setCategory] = useState("0");
+  const [priceVal, setPriceVal] = useState("0");
+  const [brand, setBrand] = useState("0");
+  const [rating, setRating] = useState("0");
   return (
     <>
       <Accordion allowMultiple>
         <AccordionItem>
-          <h2>
-            <AccordionButton w={"100%"}>
-              <Box as="span" flex="1" textAlign="left">
-                Categories
-              </Box>
-              <AccordionIcon />
-            </AccordionButton>
-          </h2>
+          <AccordionButton w={"100%"}>
+            <Box as="span" flex="1" textAlign="left">
+              Categories
+            </Box>
+            <AccordionIcon />
+          </AccordionButton>
           <AccordionPanel pb={4}>
             <Flex direction={"column"}>
-              <Checkbox>Face</Checkbox>
-              <Checkbox>Eye</Checkbox>
-              <Checkbox>Lips</Checkbox>
-              <Checkbox>Nail</Checkbox>
-              <Checkbox>Tools & Brush</Checkbox>
+              <RadioGroup defaultValue="0" onChange={setCategory} value={category}>
+                <Flex direction="column">
+                  <Radio value="null">Default</Radio>
+                  <Radio value="Face">Face</Radio>
+                  <Radio value="Eye">Eye</Radio>
+                  <Radio value="Lips">Lips</Radio>
+                  <Radio value="Nail">Nail</Radio>
+                  <Radio value="Tools">Tools</Radio>
+                </Flex>
+              </RadioGroup>
             </Flex>
           </AccordionPanel>
         </AccordionItem>
@@ -49,11 +46,14 @@ const AccordSection = () => {
             </AccordionButton>
           </h2>
           <AccordionPanel pb={4}>
-            <Flex direction={"column"}>
-              <Checkbox>Below ₹ 500</Checkbox>
-              <Checkbox>₹ 500 - ₹ 800</Checkbox>
-              <Checkbox>₹ 800 and Above</Checkbox>
-            </Flex>
+            <RadioGroup onChange={setPriceVal} value={priceVal}>
+              <Flex direction="column">
+                <Radio value="0">Default</Radio>
+                <Radio value="1">Below ₹ 500</Radio>
+                <Radio value="2">₹ 500 - ₹ 800</Radio>
+                <Radio value="3">₹ 800 and Above</Radio>
+              </Flex>
+            </RadioGroup>
           </AccordionPanel>
         </AccordionItem>
         <AccordionItem>
@@ -66,14 +66,17 @@ const AccordSection = () => {
             </AccordionButton>
           </h2>
           <AccordionPanel pb={4}>
-            <Flex direction={"column"}>
-              <Checkbox>Miss Claire</Checkbox>
-              <Checkbox>L'Oreal Paris</Checkbox>
-              <Checkbox>Lakme</Checkbox>
-              <Checkbox>Swiss Beauty</Checkbox>
-              <Checkbox>Mamaearth</Checkbox>
-              <Checkbox>Pond's</Checkbox>
-            </Flex>
+            <RadioGroup onChange={setBrand} value={brand}>
+              <Flex direction="column">
+                <Radio value="0">Default</Radio>
+                <Radio value="1">Miss Claire</Radio>
+                <Radio value="2">L'Oreal Paris</Radio>
+                <Radio value="3">Lakme</Radio>
+                <Radio value="4">Swiss Beauty</Radio>
+                <Radio value="5">Mamaearth</Radio>
+                <Radio value="6">Pond's</Radio>
+              </Flex>
+            </RadioGroup>
           </AccordionPanel>
         </AccordionItem>
         <AccordionItem>
@@ -86,13 +89,16 @@ const AccordSection = () => {
             </AccordionButton>
           </h2>
           <AccordionPanel pb={4}>
-          <Flex direction={"column"}>
-              <Checkbox>1</Checkbox>
-              <Checkbox>2</Checkbox>
-              <Checkbox>3</Checkbox>
-              <Checkbox>4</Checkbox>
-              <Checkbox>5</Checkbox>
-            </Flex>
+            <RadioGroup onChange={setRating} value={rating}>
+              <Flex direction="column">
+                <Radio value="0">Default</Radio>
+                <Radio value="1">1</Radio>
+                <Radio value="2">2</Radio>
+                <Radio value="3">3</Radio>
+                <Radio value="4">4</Radio>
+                <Radio value="5">5</Radio>
+              </Flex>
+            </RadioGroup>
           </AccordionPanel>
         </AccordionItem>
       </Accordion>
