@@ -67,6 +67,7 @@ const LoginPopup = ({ isOpen, onClose }) => {
     myNavi("/auth");
     onClose();
   };
+  
   const handleAdminDirection = () => {
     myNavi("/admin");
     onClose();
