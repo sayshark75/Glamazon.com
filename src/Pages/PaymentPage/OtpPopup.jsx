@@ -40,8 +40,6 @@ const OtpPopup = ({ otpData, isOpen, onClose }) => {
         isClosable: true,
       });
     }
-
-    
   }
 
   return (
@@ -53,7 +51,7 @@ const OtpPopup = ({ otpData, isOpen, onClose }) => {
           <ModalCloseButton />
           <ModalBody>
             <Text  p={"4"} align={"center"} fontSize={"lg"}>
-              Enter the OTP
+              Enter the OTP (7557)
             </Text>
             <Flex justifyContent={"center"} gap={"4"} p={"6"}>
               <PinInput >

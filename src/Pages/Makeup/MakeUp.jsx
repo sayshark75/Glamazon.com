@@ -21,7 +21,6 @@ const MakeUp = () => {
   const getMakeupData = async (url) => {
     const makeupData = await getFullData(url);
     const tPages = makeupData.headers["x-total-count"];
-    console.log("tPages: ", tPages);
     setData(makeupData.data);
     setTotalpage(Math.floor(tPages / makeupData.data.length));
     setLoading(false);

@@ -26,8 +26,8 @@ import { getData } from "../../Api/Requests";
 const LoginPopup = ({ isOpen, onClose }) => {
   const myNavi = useNavigate();
   const { setAuth, setUsername } = useContext(AuthContext);
-  const [user, setUser] = useState("");
-  const [pass, setPass] = useState("");
+  const [user, setUser] = useState("SayyedSharuk");
+  const [pass, setPass] = useState("sharuk@123");
   const [loadLogin, setLoadLogin] = useState(false);
   const [show, setShow] = React.useState(false);
   const handleClick = () => setShow(!show);
@@ -83,7 +83,7 @@ const LoginPopup = ({ isOpen, onClose }) => {
             {/* Email Secion */}
             <FormControl>
               <FormLabel>Enter Username</FormLabel>
-              <Input value={user} onChange={(e) => setUser(e.target.value)} m={"1"} variant="flushed" borderColor={"blackAlpha.900"} placeholder="Example: LoremIpsum123" />
+              <Input value={user} onChange={(e) => setUser(e.target.value)} m={"1"} variant="flushed" borderColor={"blackAlpha.900"} placeholder="Example: User123" />
               {/* Pasword Section */}
               <FormLabel>Enter Password</FormLabel>
 

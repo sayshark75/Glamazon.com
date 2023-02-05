@@ -8,6 +8,7 @@ import WishCardComp from "./WishCardComp";
 const WishListPage = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [query,setQuery] = useState("");
 
   const myNavi = useNavigate();
 
@@ -18,21 +19,17 @@ const WishListPage = () => {
 
   const getCartData = async () => {
     const myData = await getData(`/wishlist`);
-    console.log("WishList Data: ", myData);
     setData(myData);
     setLoading(false);
   };
 
   const removeData = async (id) => {
-    const myData = await deleteData(`/wishlist`, id);
-    console.log("Removed Data Response: ", myData);
+    await deleteData(`/wishlist`, id);
     await getCartData();
   };
   const AddToCart = async (obj,id) => {
-    const myPostData = await postData(`/shoppingcart`,obj)
-    console.log('myPostData: ', myPostData);
-    const myData = await deleteData(`/wishlist`, id);
-    console.log("Removed Data Response: ", myData);
+    await postData(`/shoppingcart`,obj)
+    await deleteData(`/wishlist`, id);
     await getCartData();
   };
 
@@ -43,7 +40,7 @@ const WishListPage = () => {
       ) : data.length !== 0 ? (
         <Flex m={"auto"} mt={"2"} w={{ base: "100%", md: "100%", lg: "90%", xl: "80%" }}>
           <Flex direction={"column"} w={{ base: "200px", sm: "200px", md: "25%" }}>
-            <AccordSection />
+            <AccordSection setQuery={setQuery} />
           </Flex>
           {/* change it to wrap chakraui */}
           <SimpleGrid spacing={"2"} columns={{base:"1",sm:"2",md:"3"}} p={"4"} w={"75%"}>

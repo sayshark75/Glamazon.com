@@ -14,17 +14,17 @@ const AuthComp = () => {
 
   const toast = useToast();
   // Signup Stuff
-  const [fname, setFname] = useState("");
-  const [lname, setLname] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [username, setUserName] = useState("");
-  const [password, setPassword] = useState("");
-  const [cpass, setCPass] = useState("");
+  const [fname, setFname] = useState("fName");
+  const [lname, setLname] = useState("lName");
+  const [email, setEmail] = useState("user@email.com");
+  const [phone, setPhone] = useState("7654321987");
+  const [username, setUserName] = useState("user@123");
+  const [password, setPassword] = useState("user@123");
+  const [cpass, setCPass] = useState("user@123");
 
   // Login Stuff
-  const [logUser,setLogUser] = useState("");
-  const [logPass,setLogPass] = useState("");
+  const [logUser,setLogUser] = useState("SayyedSharuk");
+  const [logPass,setLogPass] = useState("sharuk@123");
   const [loadLogin, setLoadLogin] = useState(false);
   const myNavi = useNavigate();
   const { setAuth, setUsername } = useContext(AuthContext);
