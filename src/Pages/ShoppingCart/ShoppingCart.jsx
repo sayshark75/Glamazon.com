@@ -27,7 +27,6 @@ const ShoppingCart = () => {
 
   const getCartData = async () => {
     const myData = await getData(`/shoppingcart`);
-    console.log("ShopCart Data: ", myData);
     setData(myData);
     const priceCalc = myData.reduce((acc, el) => {
       return acc + el.price;
@@ -37,8 +36,7 @@ const ShoppingCart = () => {
   };
 
   const removeData = async (id) => {
-    const myData = await deleteData(`/shoppingcart`, id);
-    console.log("Removed Data Response: ", myData);
+    await deleteData(`/shoppingcart`, id);
     await getCartData();
   };
 

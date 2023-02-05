@@ -19,7 +19,7 @@ const Card = ({ obj }) => {
     play();
     if (target === "s") {
       setShopLoad(true);
-      const myData = await postData(`/shoppingcart`, dataObj);
+      await postData(`/shoppingcart`, dataObj);
       toast({
         position: "bottom-left",
         render: () => (
@@ -29,11 +29,9 @@ const Card = ({ obj }) => {
         ),
       });
       setShopLoad(false);
-      console.log("SentCartData Response: ", myData);
     } else {
       setWishLoad(true);
-      const myData = await postData(`/wishlist`, dataObj);
-      console.log("SentWishlistData Response: ", myData);
+      await postData(`/wishlist`, dataObj);
       toast({
         position: "bottom-left",
         render: () => (

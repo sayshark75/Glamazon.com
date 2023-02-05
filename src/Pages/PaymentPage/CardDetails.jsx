@@ -26,23 +26,23 @@ const CardDetails = () => {
         <Text mt={"2"} align={"left"} as={"b"} fontSize={"sm"}>
           Enter Full Name
         </Text>
-        <Input placeholder="Enter Full Name as Mentioned on Card" />
+        <Input placeholder="Enter Full Name as Mentioned on Card" value={"Sayyed Sharuk Sharfuddin"} />
         <Text py={"3"} mt={"2"} align={"left"} as={"b"} fontSize={"sm"}>
           Enter Card Number
         </Text>
-        <Input placeholder="Enter Card Number 16 Digits" />
+        <Input placeholder="Enter Card Number 16 Digits" value={"1234 1234 1234 1234"} />
         <Flex py={"3"} gap={"4"} w={"100%"}>
           <Flex w={"50%"} direction={"column"}>
             <Text mt={"2"} align={"left"} as={"b"} fontSize={"sm"}>
               Enter Expiry Date
             </Text>
-            <Input placeholder="4 Digit Expiry Date" />
+            <Input placeholder="4 Digit Expiry Date" value={"1234"}/>
           </Flex>
           <Flex w={"50%"} direction={"column"}>
             <Text mt={"2"} align={"left"} as={"b"} fontSize={"sm"}>
               Enter CVV
             </Text>
-            <Input placeholder="3 Digit CVV Number" />
+            <Input placeholder="3 Digit CVV Number" value={"123"} />
           </Flex>
         </Flex>
         <Button my={"4"} _hover={{ color: "Black", backgroundColor: "white" }} borderRadius={"0px"} color={"white"} bgColor={"black"} onClick={handleSubmit}>{load?<Spinner size="sm" />:"Proceed Order"}</Button>

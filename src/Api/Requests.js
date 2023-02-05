@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BaseURL = `https://glamazonapi.onrender.com`;
+const BaseURL = `https://nice-ruby-beaver-fez.cyclic.app`;
 
 export const getFullData = async (url) => {
   try {
