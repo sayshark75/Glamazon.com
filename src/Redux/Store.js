@@ -1,6 +1,9 @@
 import { legacy_createStore, applyMiddleware, combineReducers, compose } from "redux";
+import { MakeupReducer } from "./Products/MakeUp/MakeUp.reducer";
 
-const rootReducer = combineReducers({});
+const rootReducer = combineReducers({
+  MakeUpManager: MakeupReducer,
+});
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
