@@ -45,7 +45,7 @@ const AuthComp = () => {
     } else {
       toast({
         title: "Login Success",
-        description: "Redirecting to Shopping Page",
+        description: "Redirecting to Shopping Cart",
         status: "success",
         duration: 3000,
         isClosable: true,
@@ -53,7 +53,7 @@ const AuthComp = () => {
       setUsername(logData[0].username);
       setAuth(true);
       setTimeout(() => {
-        myNavi("/makeup");
+        myNavi("/shoppingcart");
       }, 2000);
     }
   };
