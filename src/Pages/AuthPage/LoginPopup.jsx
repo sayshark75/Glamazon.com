@@ -21,7 +21,7 @@ import {
 } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { getData } from "../../Api/Requests";
+import { getFullData } from "../../Api/Requests";
 
 const LoginPopup = ({ isOpen, onClose }) => {
   const myNavi = useNavigate();
@@ -35,10 +35,10 @@ const LoginPopup = ({ isOpen, onClose }) => {
 
   const handleAuthLogin = async () => {
     setLoadLogin(true);
-    const logData = await getData(`/login?username=${user}&password=${pass}`);
+    const logData = await getFullData(`/login?username=${user}&password=${pass}`);
 
     setLoadLogin(false);
-    if (logData.length === 0) {
+    if (logData.data.length === 0) {
       toast({
         title: "Login Failed",
         description: "Invalid Credentials",

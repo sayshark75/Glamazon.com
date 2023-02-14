@@ -6,6 +6,7 @@ import Card from "../../Components/Card";
 import PaginationComp from "./PaginationComp";
 import { useDispatch, useSelector } from "react-redux";
 import { getProductData } from "../../Redux/Products/Products.actions";
+import { resetQuery } from "../../Redux/Products/MakeUp/MakeUp.actions";
 
 const MakeUp = () => {
   const dispatch = useDispatch();
@@ -15,6 +16,11 @@ const MakeUp = () => {
   useEffect(() => {
     dispatch(getProductData(`/makeup?_page=${page}&_limit=9&${query.join("&")}`));
   }, [page, ...query]);
+
+  useEffect(() => {
+    dispatch(resetQuery());
+    dispatch(getProductData(`/makeup?_page=${page}&_limit=9&${query.join("&")}`));
+  },[]);
 
   return (
     <>

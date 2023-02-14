@@ -1,7 +1,7 @@
 import { Button, Flex, Input, Spinner, Text, useDisclosure } from "@chakra-ui/react";
 import React from "react";
 import { useState } from "react";
-import { getData } from "../../Api/Requests";
+import { getFullData } from "../../Api/Requests";
 import OtpPopup from "./OtpPopup";
 
 const CardDetails = () => {
@@ -11,8 +11,8 @@ const CardDetails = () => {
   const [otpData,setOtpData] = useState([]);
   const handleSubmit = async () => {
     setLoad(true);
-    const myData =await getData(`/payment`);
-    setOtpData(myData);
+    const myData = await getFullData(`/payment`);
+    setOtpData(myData.data);
     onOpen();
     setLoad(false)
   };

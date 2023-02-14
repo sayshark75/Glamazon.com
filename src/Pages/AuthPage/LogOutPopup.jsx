@@ -3,7 +3,7 @@ import { AuthContext } from "../../Context/AuthContextProvider";
 import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Button, Flex, useToast, Avatar, Text } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { getData } from "../../Api/Requests";
+import { getFullData } from "../../Api/Requests";
 import { useEffect } from "react";
 
 const LogOutPopup = ({ isOpen, onClose }) => {
@@ -17,8 +17,8 @@ const LogOutPopup = ({ isOpen, onClose }) => {
   },);
 
   const getUserData = async () => {
-    const userData = await getData(`/register?username=${Authuser}`);
-    setUData(userData[0]);
+    const userData = await getFullData(`/register?username=${Authuser}`);
+    setUData(userData.data[0]);
   };
 
   const handleAuthLogout = async () => {
