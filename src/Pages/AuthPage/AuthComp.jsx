@@ -1,7 +1,7 @@
 import { Flex, Text, FormControl, FormLabel, Input, Divider, InputGroup, InputLeftAddon, Button, InputRightElement, useToast, Spinner } from "@chakra-ui/react";
 import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { getData, postData } from "../../Api/Requests";
+import { getFullData, postData } from "../../Api/Requests";
 import { AuthContext } from "../../Context/AuthContextProvider";
 
 const AuthComp = () => {
@@ -31,10 +31,10 @@ const AuthComp = () => {
 
   const handleAuthLogin = async () => {
     setLoadLogin(true);
-    const logData = await getData(`/login?username=${logUser}&password=${logPass}`);
+    const logData = await getFullData(`/login?username=${logUser}&password=${logPass}`);
 
     setLoadLogin(false);
-    if (logData.length === 0) {
+    if (logData.data.length === 0) {
       toast({
         title: "Login Failed",
         description: "Invalid Credentials",
@@ -50,7 +50,7 @@ const AuthComp = () => {
         duration: 3000,
         isClosable: true,
       });
-      setUsername(logData[0].username);
+      setUsername(logData.data[0].username);
       setAuth(true);
       setTimeout(() => {
         myNavi("/shoppingcart");

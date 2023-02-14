@@ -28,7 +28,7 @@ export const MakeupReducer = (state = initData, { type, payload }) => {
       return state;
     }
     case RESET_QUERY: {
-      return { ...state, query: "random=1" };
+      return { ...state, query: ["random=1", "", "", ""] };
     }
     default: {
       return state;

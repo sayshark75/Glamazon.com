@@ -1,7 +1,7 @@
 import { Flex } from "@chakra-ui/react";
 import React, { useContext, useState } from "react";
 import { useEffect } from "react";
-import { getData } from "../../Api/Requests";
+import { getFullData } from "../../Api/Requests";
 import { AuthContext } from "../../Context/AuthContextProvider";
 import AddressComp from "./AddressComp";
 import CardDetails from "./CardDetails";
@@ -17,9 +17,9 @@ const PaymentPage = () => {
     getUserAddress();
   });
   const getUserAddress = async () => {
-    const myData = await getData(`/address?username=${Authuser}`);
+    const myData = await getFullData(`/address?username=${Authuser}`);
     myData.length === 0 ? setAddrPresent(false) : setAddrPresent(true);
-    setAddrData(myData[0]);
+    setAddrData(myData.data[0]);
   };
 
   const handleAddrData = (obj) => {

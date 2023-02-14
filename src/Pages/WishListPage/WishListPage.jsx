@@ -1,54 +1,43 @@
-import React, { useEffect, useState } from "react";
-import { Button, Flex, SimpleGrid, Spinner, Text } from "@chakra-ui/react";
+import React, { useEffect } from "react";
+import { Button, Flex, Image, SimpleGrid, Spinner, Text } from "@chakra-ui/react";
 import AccordSection from "../Makeup/AccordSection";
 import { useNavigate } from "react-router-dom";
-import { deleteData, getData, postData } from "../../Api/Requests";
 import WishCardComp from "./WishCardComp";
+import { useDispatch, useSelector } from "react-redux";
+import { getWishlistData } from "../../Redux/Cart/Wishlist/Wishlist.actions";
 
 const WishListPage = () => {
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [query,setQuery] = useState("");
+  const dispatch = useDispatch();
+  const { loading, data, error } = useSelector((store) => store.WishlistManager);
 
   const myNavi = useNavigate();
 
   useEffect(() => {
-    setLoading(true);
-    getCartData();
+    dispatch(getWishlistData(`/wishlist`));
   }, []);
-
-  const getCartData = async () => {
-    const myData = await getData(`/wishlist`);
-    setData(myData);
-    setLoading(false);
-  };
-
-  const removeData = async (id) => {
-    await deleteData(`/wishlist`, id);
-    await getCartData();
-  };
-  const AddToCart = async (obj,id) => {
-    await postData(`/shoppingcart`,obj)
-    await deleteData(`/wishlist`, id);
-    await getCartData();
-  };
 
   return (
     <>
       {loading ? (
         <Spinner thickness="4px" speed="0.65s" emptyColor="gray.200" color="blackAlpha.900" size="xl" />
       ) : data.length !== 0 ? (
-        <Flex m={"auto"} mt={"2"} w={{ base: "100%", md: "100%", lg: "90%", xl: "80%" }}>
-          <Flex direction={"column"} w={{ base: "200px", sm: "200px", md: "25%" }}>
-            <AccordSection setQuery={setQuery} />
+        error ? (
+          <Flex direction={"column"} w={"100%"} h={"600px"} justifyContent={"center"} alignItems={"center"}>
+            <Image w={"400px"} src="https://user-images.githubusercontent.com/112304655/218245639-36aca8c4-66d4-4350-81f0-119fb68f7ca7.gif" />
           </Flex>
-          {/* change it to wrap chakraui */}
-          <SimpleGrid spacing={"2"} columns={{base:"1",sm:"2",md:"3"}} p={"4"} w={"75%"}>
-            {data.map((el, id) => {
-              return <WishCardComp key={id} AddToCart={AddToCart} removeData={removeData} obj={el} />;
-            })}
-          </SimpleGrid>
-        </Flex>
+        ) : (
+          <Flex m={"auto"} mt={"2"} w={{ base: "100%", md: "100%", lg: "90%", xl: "80%" }}>
+            <Flex direction={"column"} w={{ base: "200px", sm: "200px", md: "25%" }}>
+              <AccordSection />
+            </Flex>
+            {/* change it to wrap chakraui */}
+            <SimpleGrid spacing={"2"} columns={{ base: "1", sm: "2", md: "3" }} p={"4"} w={"75%"}>
+              {data.map((el, id) => {
+                return <WishCardComp key={id} obj={el} />;
+              })}
+            </SimpleGrid>
+          </Flex>
+        )
       ) : (
         <Flex h={"200px"} m={"5"} alignItems={"center"} justifyContent="space-evenly" direction={"column"}>
           <Text fontSize="xl" align={"center"}>

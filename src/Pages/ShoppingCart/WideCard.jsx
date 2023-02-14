@@ -2,22 +2,23 @@ import { Box, Button, Flex, Image, PinInput, PinInputField, Show, Spinner, Text,
 import React, { useState } from "react";
 import StarIcon from "@mui/icons-material/Star";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
-import clickBeep from "../../Assets/click.mp3"
+import clickBeep from "../../Assets/click.mp3";
 import useSound from "use-sound";
+import { useDispatch } from "react-redux";
+import { deleteShoppingBagData } from "../../Redux/Cart/ShoppingBag/ShoppingBag.actions";
 
-const WideCard = ({obj,removeData}) => {
-  const [play] = useSound(clickBeep,{volume:0.5})
+const WideCard = ({ obj }) => {
+  const dispatch = useDispatch();
+  const [play] = useSound(clickBeep, { volume: 0.5 });
+  const [removeLoad, setRemoveLoad] = useState(false);
   const toast = useToast();
 
-  const [removeLoad,setRemoveLoad] = useState(false);
+  const { name, star, price, category, image, brand, id } = obj;
 
-
-  const { name, star, price,category, image, brand,id } = obj;
-
-  const handleRemove =async () => {
+  const handleRemove = async () => {
     play();
     setRemoveLoad(true);
-    await removeData(id)
+    await dispatch(deleteShoppingBagData(`/shoppingcart`, id));
     toast({
       position: "bottom-left",
       render: () => (
@@ -27,21 +28,19 @@ const WideCard = ({obj,removeData}) => {
       ),
     });
     setRemoveLoad(false);
-  }
+  };
 
   return (
     <>
-    {/* Main Container */}
-      <Flex direction={{base:"column",lg:"row"}} mb={"2"} justifyContent={"space-between"}>
-
-      {/* Item Descriptio Section  */}
-        <Flex w={{base:"100%",sm:"100%",md:"100%",lg:"70%"}} gap={"2"}>
-
-        {/* Image ANd Button Section */}
-          <Flex gap={"2"}  direction={"column"}>
+      {/* Main Container */}
+      <Flex direction={{ base: "column", lg: "row" }} mb={"2"} justifyContent={"space-between"}>
+        {/* Item Descriptio Section  */}
+        <Flex w={{ base: "100%", sm: "100%", md: "100%", lg: "70%" }} gap={"2"}>
+          {/* Image ANd Button Section */}
+          <Flex gap={"2"} direction={"column"}>
             <Image w={"100%"} src={image} alt="hello" />
             <Button _hover={{ color: "Black", backgroundColor: "white" }} onClick={handleRemove} borderRadius={"0px"} bgColor={"blackAlpha.900"} color={"white"}>
-              {removeLoad?<Spinner size="sm" />:"Remove"}
+              {removeLoad ? <Spinner size="sm" /> : "Remove"}
             </Button>
           </Flex>
 
@@ -57,23 +56,23 @@ const WideCard = ({obj,removeData}) => {
               Brand: {brand}
             </Text>
             <Flex>
-            Rating: 
-            {star.map((el) => {
-              return el ? <StarIcon /> : <StarBorderIcon />;
-            })}
-          </Flex>
+              Rating:
+              {star?.map((el,id) => {
+                return el ? <StarIcon key={id} /> : <StarBorderIcon key={id} />;
+              })}
+            </Flex>
           </Flex>
         </Flex>
 
-      {/* Price quty and total section Hidden below sm */}
+        {/* Price quty and total section Hidden below sm */}
         <Show below="lg">
-        <Flex alignItems={"baseline"} w={{base:"100%",sm:"100%",md:"100%",lg:"30%"}} justifyContent={"space-evenly"}>
-          <Text>PRICE</Text>
-          <Text>QTY</Text>
-          <Text>Total</Text>
-        </Flex>
+          <Flex alignItems={"baseline"} w={{ base: "100%", sm: "100%", md: "100%", lg: "30%" }} justifyContent={"space-evenly"}>
+            <Text>PRICE</Text>
+            <Text>QTY</Text>
+            <Text>Total</Text>
+          </Flex>
         </Show>
-        <Flex alignItems={"baseline"} w={{base:"100%",sm:"100%",md:"100%",lg:"30%"}} justifyContent={"space-evenly"}>
+        <Flex alignItems={"baseline"} w={{ base: "100%", sm: "100%", md: "100%", lg: "30%" }} justifyContent={"space-evenly"}>
           <Text>₹ {price}</Text>
           <PinInput defaultValue="1">
             <PinInputField />
