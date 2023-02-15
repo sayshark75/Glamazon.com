@@ -1,12 +1,12 @@
-import { LOADING, ERROR, SIGNUP } from "./SignUp.types";
+import { LOADING, ERROR, LOGIN } from "./Login.types";
 
 let initData = {
-  signData: [],
+  loginData: [],
   loading: false,
   error: false,
 };
 
-export const SignUpReducer = (state = initData, { type, payload }) => {
+export const LoginReducer = (state = initData, { type, payload }) => {
   switch (type) {
     case LOADING: {
       return { ...state, loading: true };
@@ -14,8 +14,8 @@ export const SignUpReducer = (state = initData, { type, payload }) => {
     case ERROR: {
       return { ...state, loading: false, error: true };
     }
-    case SIGNUP: {
-      return { ...state, loading: false, signData: [...state.signData, payload] };
+    case LOGIN: {
+      return { ...state, loading: false, loginData: [...state.loginData, payload] };
     }
     default: {
       return state;
