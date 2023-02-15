@@ -1,6 +1,5 @@
-const LOADING = "auth/loading";
-const ERROR = "auth/error";
-const LOGIN = "auth/login";
-const SIGNUP = "auth/signup";
-const LOGOUT = "auth/logout";
+export const LOADING = "auth/loading";
+export const ERROR = "auth/error";
+export const LOGOUT = "auth/logout";
+export const AUTH = "auth/authFlag";
 

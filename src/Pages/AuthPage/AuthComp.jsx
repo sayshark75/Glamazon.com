@@ -1,8 +1,21 @@
 import { Flex, Text, FormControl, FormLabel, Input, Divider, InputGroup, InputLeftAddon, Button, InputRightElement, useToast, Spinner } from "@chakra-ui/react";
 import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { getFullData, postData } from "../../Api/Requests";
+import { getFullData } from "../../Api/Requests";
 import { AuthContext } from "../../Context/AuthContextProvider";
+import { useDispatch, useSelector } from "react-redux";
+import { SignUpDataSubmit } from "../../Redux/Auth/SignUp/SignUp.action";
+import { LoginDataSubmit } from "../../Redux/Auth/Login/Login.action";
+
+const initValSignup = {
+  fname: "",
+  lname: "",
+  email: "",
+  phone: "",
+  username: "",
+  password: "",
+  cpass: "",
+};
 
 const AuthComp = () => {
   const [show, setShow] = React.useState(false);
@@ -14,17 +27,18 @@ const AuthComp = () => {
 
   const toast = useToast();
   // Signup Stuff
-  const [fname, setFname] = useState("fName");
-  const [lname, setLname] = useState("lName");
-  const [email, setEmail] = useState("user@email.com");
-  const [phone, setPhone] = useState("7654321987");
-  const [username, setUserName] = useState("user@123");
-  const [password, setPassword] = useState("user@123");
-  const [cpass, setCPass] = useState("user@123");
+  const [signUpObj, setSignUpObj] = useState(initValSignup);
+  const handleSignupForms = (e) => {
+    const { name, value } = e.target;
+    setSignUpObj({ ...signUpObj, [name]: value });
+  };
+  const { fname, lname, email, phone, username, password, cpass } = signUpObj;
+  const dispatch = useDispatch();
+  const { logData, loading, error } = useSelector((store) => store.SignupManager);
 
   // Login Stuff
-  const [logUser,setLogUser] = useState("SayyedSharuk");
-  const [logPass,setLogPass] = useState("sharuk@123");
+  const [logUser, setLogUser] = useState("SayyedSharuk");
+  const [logPass, setLogPass] = useState("sharuk@123");
   const [loadLogin, setLoadLogin] = useState(false);
   const myNavi = useNavigate();
   const { setAuth, setUsername } = useContext(AuthContext);
@@ -85,8 +99,9 @@ const AuthComp = () => {
       password: password,
     };
 
-    await postData(`/login`, sendLoginData);
-    await postData(`/register`, sendAccData);
+    // await postData(`/login`, sendLoginData);
+    dispatch(SignUpDataSubmit(sendAccData));
+    dispatch(LoginDataSubmit(sendLoginData));
     toast({
       title: "Account Created",
       description: "Please Login to Continue",
@@ -107,7 +122,7 @@ const AuthComp = () => {
         w={{ base: "100%", md: "100%", lg: "90%", xl: "80%" }}
         p={"1"}
       >
-        <Flex w={{ base: "100%", md: "100%", lg: "50%" }}  direction={"column"}>
+        <Flex w={{ base: "100%", md: "100%", lg: "50%" }} direction={"column"}>
           <Text fontSize={"lg"} mb={"4"} align={"left"}>
             Create An Account
           </Text>
@@ -116,32 +131,33 @@ const AuthComp = () => {
               <Flex justifyContent={"space-evenly"} w={"100%"} gap={"2"}>
                 <Flex w={"50%"} direction={"column"}>
                   <FormLabel mt={"4"}>First name</FormLabel>
-                  <Input onChange={(e) => setFname(e.target.value)} value={fname} placeholder="First name" />
+                  <Input onChange={handleSignupForms} name={"fname"} value={fname} placeholder="First name" />
                 </Flex>
 
                 <Flex w={"50%"} direction={"column"}>
                   <FormLabel mt={"4"}>Last name</FormLabel>
-                  <Input onChange={(e) => setLname(e.target.value)} value={lname} placeholder="Last name" />
+                  <Input onChange={handleSignupForms} name={"lname"} value={lname} placeholder="Last name" />
                 </Flex>
               </Flex>
 
               <FormLabel mt={"4"}>User Name</FormLabel>
-              <Input onChange={(e) => setUserName(e.target.value)} value={username} type="text" placeholder="Example: LoremIpsum123" />
+              <Input onChange={handleSignupForms} name={"username"} value={username} type="text" placeholder="Example: LoremIpsum123" />
 
               <FormLabel mt={"4"}>Email Address</FormLabel>
-              <Input onChange={(e) => setEmail(e.target.value)} value={email} type="email" placeholder="Example: xyz@glamazon" />
+              <Input onChange={handleSignupForms} name={"email"} value={email} type="email" placeholder="Example: xyz@glamazon" />
 
               <FormLabel mt={"4"}>Phone Number</FormLabel>
               <InputGroup>
                 <InputLeftAddon children="+91" />
-                <Input onChange={(e) => setPhone(e.target.value)} value={phone} ml={"1"} type="text" min={"10"} max={10} placeholder="10 Digit phone number" />
+                <Input onChange={handleSignupForms} name={"phone"} value={phone} ml={"1"} type="text" min={"10"} max={10} placeholder="10 Digit phone number" />
               </InputGroup>
               <FormLabel mt={"4"}>Password</FormLabel>
               <InputGroup m={"1"} size="md">
                 <Input
-                  onChange={(e) => setPassword(e.target.value)}
+                  onChange={handleSignupForms}
                   value={password}
                   pr="4.5rem"
+                  name={"password"}
                   type={show ? "text" : "password"}
                   placeholder="8 Digit Long, with Special Characters. "
                 />
@@ -154,7 +170,7 @@ const AuthComp = () => {
 
               <FormLabel mt={"4"}>Confirm Password</FormLabel>
               <InputGroup m={"1"} size="md">
-                <Input pr="4.5rem" onChange={(e) => setCPass(e.target.value)} value={cpass} type={show2 ? "text" : "password"} placeholder="Must match with Password " />
+                <Input pr="4.5rem" name={"cpass"} onChange={handleSignupForms} value={cpass} type={show2 ? "text" : "password"} placeholder="Must match with Password " />
                 <InputRightElement width="4.5rem">
                   <Button _hover={{ color: "Black", backgroundColor: "white" }} borderRadius={"0px"} color={"white"} bgColor={"black"} h="1.75rem" size="sm" onClick={handleClick2}>
                     {show2 ? "Hide" : "Show"}
@@ -162,10 +178,7 @@ const AuthComp = () => {
                 </InputRightElement>
               </InputGroup>
 
-              <Button
-                onClick={handleSubmit} w="100%" mt={"4"}
-                _hover={{ color: "Black", backgroundColor: "white" }} borderRadius={"0px"} color={"white"} bgColor={"black"} mr={3}
-              >
+              <Button onClick={handleSubmit} w="100%" mt={"4"} _hover={{ color: "Black", backgroundColor: "white" }} borderRadius={"0px"} color={"white"} bgColor={"black"} mr={3}>
                 {accLoad ? <Spinner size="sm" /> : "Create Account"}
               </Button>
             </Flex>
@@ -179,38 +192,47 @@ const AuthComp = () => {
         {/* Login Section */}
 
         <Flex p={"3"} direction={"column"} w={{ base: "100%", md: "100%", lg: "50%" }}>
-          <Text fontSize={"lg"} mb={"4"} align={"left"}>Already Have an Account? Login</Text>
+          <Text fontSize={"lg"} mb={"4"} align={"left"}>
+            Already Have an Account? Login
+          </Text>
           <FormControl>
-              <FormLabel>Enter Username</FormLabel>
-              <Input value={logUser} onChange={(e) => setLogUser(e.target.value)} m={"1"}   placeholder="Example: LoremIpsum123" />
-              {/* Pasword Section */}
-              <FormLabel>Enter Password</FormLabel>
+            <FormLabel>Enter Username</FormLabel>
+            <Input value={logUser} onChange={(e) => setLogUser(e.target.value)} m={"1"} placeholder="Example: LoremIpsum123" />
+            {/* Pasword Section */}
+            <FormLabel>Enter Password</FormLabel>
 
-              <InputGroup m={"1"} size="md">
-                <Input
-                  value={logPass}
-                  onChange={(e) => setLogPass(e.target.value)}
-                  pr="4.5rem"
-                  
-                  
-                  type={show ? "text" : "password"}
-                  placeholder="8 Digit Long, with Special Characters. "
-                />
-                <InputRightElement width="4.5rem">
-                  <Button _hover={{ color: "Black", backgroundColor: "white" }} borderRadius={"0px"} color={"white"} bgColor={"black"} h="1.75rem" size="sm" onClick={handleClick}>
-                    {show ? "Hide" : "Show"}
-                  </Button>
-                </InputRightElement>
-              </InputGroup>
-            </FormControl>
+            <InputGroup m={"1"} size="md">
+              <Input
+                value={logPass}
+                onChange={(e) => setLogPass(e.target.value)}
+                pr="4.5rem"
+                type={show ? "text" : "password"}
+                placeholder="8 Digit Long, with Special Characters. "
+              />
+              <InputRightElement width="4.5rem">
+                <Button _hover={{ color: "Black", backgroundColor: "white" }} borderRadius={"0px"} color={"white"} bgColor={"black"} h="1.75rem" size="sm" onClick={handleClick}>
+                  {show ? "Hide" : "Show"}
+                </Button>
+              </InputRightElement>
+            </InputGroup>
+          </FormControl>
 
-            <Flex w={"100%"} direction={"column"}>
-              <Button mt={"4"} w={"100%"} _hover={{ color: "Black", backgroundColor: "white" }} borderRadius={"0px"} color={"white"} bgColor={"black"} mr={3} onClick={handleAuthLogin}>
-                {loadLogin ? <Spinner size="sm"/> : "Log In"}
-              </Button>
-            </Flex>
+          <Flex w={"100%"} direction={"column"}>
+            <Button
+              mt={"4"}
+              w={"100%"}
+              _hover={{ color: "Black", backgroundColor: "white" }}
+              borderRadius={"0px"}
+              color={"white"}
+              bgColor={"black"}
+              mr={3}
+              onClick={handleAuthLogin}
+            >
+              {loadLogin ? <Spinner size="sm" /> : "Log In"}
+            </Button>
           </Flex>
         </Flex>
+      </Flex>
     </>
   );
 };
